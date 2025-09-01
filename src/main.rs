@@ -28,14 +28,21 @@ fn main() {
     println!("  {}", message);
     let code = encode(message.as_bytes());
     println!();
+
     println!("Encoded message:");
     println!("  {:?}", code);
     println!();
+
+    println!("Encoded message is_nan:");
+    println!("  {:?}", code.iter().map(|c| c.is_nan()));
+    println!();
+
     println!("Encoded message as bits:");
     for c in &code {
         println!("  {:064b}", c.to_bits());
     }
     println!();
+
     println!("Decoded message:");
     let mut decoded = decode(&code[..]);
     decoded.retain(|c| *c != 0);

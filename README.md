@@ -2,7 +2,6 @@
 
 This is a small demo to show that one can "hide" secret bytes in IEEE 754 floating point NaN values.
 
-
 ```
 Original message:
   This is a secret message hidden in f64 NaN values.
@@ -26,3 +25,5 @@ Decoded message:
 ```
 
 The reason this works is that a IEEE 754 float with an exponent of all 1s is understood to be NaN, irrespective of the fraction bits (except for the special case of the fraction bits being all 0s, which is positive/negative infinity, depending on the sign).
+
+Therefore we can "hide" arbitrary data in the fraction bits. If inspected by printing , the value is simply `NaN`, 
