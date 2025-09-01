@@ -34,10 +34,18 @@ fn main() {
     println!();
 
     println!("Encoded message `is_nan`:");
-    println!("  {:?}", code.iter().map(|c| c.is_nan()).collect::<Vec<_>>());
+    println!(
+        "  {:?}",
+        code.iter().map(|c| c.is_nan()).collect::<Vec<_>>()
+    );
     println!();
 
     println!("Encoded message as bits:");
+    println!(
+        " S{}{}",
+        core::str::from_utf8(&[b'E'; 11]).unwrap(),
+        core::str::from_utf8(&[b'F'; 52]).unwrap()
+    );
     for c in &code {
         println!("  {:064b}", c.to_bits());
     }
