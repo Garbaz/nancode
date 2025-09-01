@@ -33,8 +33,8 @@ fn main() {
     println!("  {:?}", code);
     println!();
 
-    println!("Encoded message is_nan:");
-    println!("  {:?}", code.iter().map(|c| c.is_nan()));
+    println!("Encoded message `is_nan`:");
+    println!("  {:?}", code.iter().map(|c| c.is_nan()).collect::<Vec<_>>());
     println!();
 
     println!("Encoded message as bits:");

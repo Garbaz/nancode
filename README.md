@@ -9,6 +9,9 @@ Original message:
 Encoded message:
   [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN]
 
+Encoded message `is_nan`:
+  [true, true, true, true, true, true, true, true, true]
+
 Encoded message as bits:
   0111111111110000011010010010000001110011011010010110100001010100
   0111111111110000011001010111001100100000011000010010000001110011
@@ -26,4 +29,4 @@ Decoded message:
 
 The reason this works is that a IEEE 754 float with an exponent of all 1s is understood to be NaN, irrespective of the fraction bits (except for the special case of the fraction bits being all 0s, which is positive/negative infinity, depending on the sign).
 
-Therefore we can "hide" arbitrary data in the fraction bits. If inspected by printing , the value is simply `NaN`, 
+Therefore we can "hide" arbitrary data in the fraction bits. If inspected by printing or using `is_nan`, the float is simply considered a `NaN` value, even though we can get our hidden data back out at a later date.
