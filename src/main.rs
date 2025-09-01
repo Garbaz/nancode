@@ -33,7 +33,7 @@ fn main() {
     println!();
     println!("Encoded message as bits:");
     for c in &code {
-        println!("  {:b}", c.to_bits());
+        println!("  {:064b}", c.to_bits());
     }
     println!();
     println!("Decoded message:");
