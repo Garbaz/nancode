@@ -42,7 +42,7 @@ fn main() {
 
     println!("Encoded message as bits:");
     println!(
-        " S{}{}",
+        "  S{}{}",
         core::str::from_utf8(&[b'E'; 11]).unwrap(),
         core::str::from_utf8(&[b'F'; 52]).unwrap()
     );
