@@ -41,11 +41,6 @@ fn main() {
     println!();
 
     println!("Encoded message as bits:");
-    println!(
-        "  S{}{}",
-        core::str::from_utf8(&[b'E'; 11]).unwrap(),
-        core::str::from_utf8(&[b'F'; 52]).unwrap()
-    );
     for c in &code {
         println!("  {:064b}", c.to_bits());
     }
